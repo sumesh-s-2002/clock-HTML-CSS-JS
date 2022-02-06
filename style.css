@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    background-color:#fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: all 300ms ease-in;
+}
+.clock{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.minute{
+    width: 98px;
+    height: 2px;
+    background-color:black;
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+    transform : rotate(-90deg);
+}
+.second{
+    width: 110px;
+    height: 2px;
+    background-color:red;
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+    transform : rotate(-90deg);
+
+}
+.hour{
+    z-index: 0;
+    width: 78px;
+    height: 2px;
+    background-color:black;
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: left;
+    transform : rotate(-90deg);
+}
+.btn{
+    margin-bottom: 30px;
+    border: none;
+    background : black;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.digital{
+    margin-top: 30px;
+    display : flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.time{
+    font-size: 33px;
+    font-weight: lighter;
+}
+.date{
+    font-size: 12px;
+}
+.circle{
+    background-color: black;
+    color : white;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+.date{
+    display : flex;
+    align-items: center;
+    gap: 5px;
+}
+.active{
+    background-color: rgb(68, 64, 64);
+    color : white;
+}
+.active .minute{
+    background-color: white
+}
+.active .hour{
+    background-color: white;
+}
+.active span{
+    background-color: white;
+    color: black;
+}
+.active .btn{
+    background-color: white;
+    color : black;
+}
